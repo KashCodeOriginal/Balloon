@@ -1,0 +1,34 @@
+STUDIO SKYE
+Modular Cliff Building Pack
+
+
+Please see sample scenes for example of use.
+
+In the pack:
+
+6 x cliff faces (plus one mirrorred version to give variety/ balance)
+Sample Scenes
+Terrain Textures
+
+
+++ Method ++
+Place and position the prefab models using scaling and rotation to allow variety of cliff and avoid repetition. 
+
+++ Terrain Textures ++
+Rock detail textures are included to allow you to blend rock and terrain naturally - use these sparingly where cliff meets terrain. 
+Some simple generic terrain textures are also included.
+
+++ Shader ++
+Unity Standard Shader has been used to give you maximum flexibility. 
+Detail textures are used for Secondary Maps in the Standard Shader. 
+Extra detail textures are provided  - try modifying the cliff materials by adding an alternative detail texture to the Secondary Map. This will give you more range of rock colour and feel.
+
+++ Model Edges ++
+The FBX models have low-poly style hard edges built in. You can tweak this in the Inspector. Select an FBX and go to Normals & Tangents -> Choose "Calculate" from the Normals drop down then use the Smoothing Angle slider to tweak
+
+That's about it!
+
+Enjoy!
+
+Alex
+Studio Skye
