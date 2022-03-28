@@ -126,7 +126,7 @@ MonoBehaviour:
         tint: 0
         hueShift: 0
         saturation: 1.4
-        contrast: 1.2
+        contrast: 1
       channelMixer:
         red: {x: 1, y: 0, z: 0}
         green: {x: 0, y: 1, z: 0}
@@ -321,10 +321,10 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       mode: 0
-      color: {r: 0, g: 0, b: 0, a: 1}
+      color: {r: 1, g: 0.5108007, b: 0.3339622, a: 1}
       center: {x: 0.5, y: 0.5}
       intensity: 0.2
-      smoothness: 0.2
+      smoothness: 0.32
       roundness: 1
       mask: {fileID: 0}
       opacity: 1

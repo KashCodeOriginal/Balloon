@@ -132,6 +132,7 @@ Material:
         m_Texture: {fileID: 2800000, guid: 0c41e829b9bb6ee4cb72abae07230cdb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _Albedo2Flow: 0.9
     - _Albedo2Tiling: 0.9
@@ -245,3 +246,4 @@ Material:
     - _ReflectColor: {r: 0.07605405, g: 0.084, b: 0.082864866, a: 1}
     - _SpecColor: {r: 0.4, g: 0.4, b: 0.3764706, a: 1}
     - _SpecularColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 1}
+  m_BuildTextureStacks: []
