@@ -2,34 +2,47 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float _playerSpeed;
-    [SerializeField] private float _speedChangingValue;
-
     [SerializeField] private float _playerMovingSpeed;
-
-    private Rigidbody rb;
+    [SerializeField] private float _upMovingSpeed;
+    [SerializeField] private float _rotationSpeed;
+        
+    private Rigidbody _rbPlayer;
     private Vector3 _playerMovementInput;
-
+    private Vector3 MoveVector;
+    
     private void Start()
     {
-        rb = gameObject.GetComponent<Rigidbody>();
+        _rbPlayer = gameObject.GetComponent<Rigidbody>();
     }
-    private void Update()
+    private void FixedUpdate()
     {
-        if (_playerSpeed <= 10)
+        _playerMovementInput = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
+        MoveVector = transform.TransformDirection(_playerMovementInput) * _playerMovingSpeed;
+        PlayerMovementControl();
+        if (Input.GetKey(KeyCode.E) && gameObject.transform.localPosition.z <= 5f)
         {
-            _playerSpeed += _speedChangingValue;
+            BallonAddHeight();
         }
 
-        _playerMovementInput = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
-
-        PlayerMovementControl();
+        if (Input.GetKey(KeyCode.Z))
+        {
+            BaloonRotation();
+        }
     }
 
     private void PlayerMovementControl()
     {
-        Vector3 MoveVector = transform.TransformDirection(_playerMovementInput) * _playerMovingSpeed;
-        rb.velocity = new Vector3(MoveVector.x, rb.velocity.y, MoveVector.z);
+        _rbPlayer.velocity = new Vector3(MoveVector.x, _rbPlayer.velocity.y, MoveVector.z);
+    }
+
+    private void BallonAddHeight()
+    {
+        _rbPlayer.velocity = new Vector3(MoveVector.x, _upMovingSpeed, MoveVector.z);
+    }
+
+    private void BaloonRotation()
+    {
+        _rbPlayer.AddRelativeTorque(_rotationSpeed,0f,0f);
     }
 }
 
