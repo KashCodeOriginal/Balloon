@@ -5,6 +5,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _playerMovingSpeed;
     [SerializeField] private float _upMovingSpeed;
     [SerializeField] private float _rotationSpeed;
+
+    public float _allowedBallonHeight { get; set; }
         
     private Rigidbody _rbPlayer;
     private Vector3 _playerMovementInput;
@@ -42,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void BaloonRotation()
     {
-        _rbPlayer.AddRelativeTorque(_rotationSpeed,0f,0f);
+        //_rbPlayer.AddRelativeTorque(-_rotationSpeed,0f,0  f);
     }
 }
 
