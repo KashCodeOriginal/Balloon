@@ -15,13 +15,14 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         _rbPlayer = gameObject.GetComponent<Rigidbody>();
+        _allowedBallonHeight = 4.5f;
     }
     private void FixedUpdate()
     {
         _playerMovementInput = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
         MoveVector = transform.TransformDirection(_playerMovementInput) * _playerMovingSpeed;
         PlayerMovementControl();
-        if (Input.GetKey(KeyCode.E) && gameObject.transform.localPosition.z <= 5f)
+        if (Input.GetKey(KeyCode.E) && gameObject.transform.localPosition.z <= _allowedBallonHeight)
         {
             BallonAddHeight();
         }

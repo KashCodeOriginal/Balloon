@@ -1,18 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class OnTriggerEntered : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private PlayerMovement _playerMovement;
+    private void OnTriggerEnter(Collider _collider)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        if (_collider.name == "Height6")
+        {
+            _playerMovement._allowedBallonHeight = 6f;
+        }
+        if (_collider.name == "Height7")
+        {
+            _playerMovement._allowedBallonHeight = 7f;
+        }
+        if (_collider.name == "Height9")
+        {
+            _playerMovement._allowedBallonHeight = 9f;
+        }
+        if (_collider.name == "Height11")
+        {
+            _playerMovement._allowedBallonHeight = 11f;
+        }
+        if (_collider.name == "Height12")
+        {
+            _playerMovement._allowedBallonHeight = 12f;
+        }
         
     }
 }
